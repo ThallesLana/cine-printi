@@ -36,7 +36,7 @@ Retorna todos os filmes cadastrados no banco de dados;
 
 Também é possível passar 4 tipos de paramêtro para acessar os filmes.
 Para isso é necessário enviar um objeto JSON para a consulta, os paramêtros são: `title`, `category`, `release_year`, `age_range`;
-``` JSON
+```
 {
     title: batm
     category: null
@@ -47,7 +47,7 @@ Para isso é necessário enviar um objeto JSON para a consulta, os paramêtros s
 `POST -> /api/create`
  
 Cria um novo filme no banco de dados. É necessário enviar um objeto JSON contendo as seguintes informações:
-``` JSON
+```
 {
     title: Stalker
     category: thriller
@@ -60,7 +60,7 @@ Cria um novo filme no banco de dados. É necessário enviar um objeto JSON conte
 
 Atualiza as informações do filme com o ID especificado. É necessário enviar um objeto JSON contendo as informações atualizadas:
 
-``` JSON
+```
 {
     id_movie: 1
     title: The Joker
@@ -74,7 +74,7 @@ Atualiza as informações do filme com o ID especificado. É necessário enviar 
 
 Remove o filme com o ID especificado do banco de dados.
 
-``` JSON
+```
 {
     id_movie: 1
 }
