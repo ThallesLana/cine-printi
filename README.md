@@ -6,7 +6,7 @@
 #### Para instalar e executar a API, siga as seguintes etapas:
 1. Clone o repositório da API do Github:
 ``` bash
-git clone <url_do_repositório>
+git clone https://github.com/ThallesLana/cine-printi.git
 ```
 2. Instale as dependências do Composer:
 ``` bash
