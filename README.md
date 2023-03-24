@@ -86,4 +86,4 @@ Remove o filme com o ID especificado do banco de dados.
 ```
 
 ## Considerações finais
-Esta documentação deve fornecer as informações necessárias para usar a API de filmes. Foi montada seguindo todas as instruções passadas.
+Esta documentação deve fornecer as informações necessárias para usar a API de filmes. Nesse teste foi realizado todas as instruções solicitadas;
