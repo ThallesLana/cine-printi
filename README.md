@@ -16,7 +16,7 @@ composer install
 ``` bash
 cp .env.example .env
 ```
-4. Execute as migrações do banco de dados para criar as tabelas necessárias (A adição da flag `--seed` é por conta que já deixei um registro cadastrado para teste de consulta e verificação):
+4. Execute as migrações do banco de dados para criar as tabelas necessárias (A adição da flag `--seed` é para registrar um dado para teste de consulta e verificação):
 ``` bash
 php artisan migrate --seed
 ```
@@ -44,6 +44,11 @@ Para isso é necessário enviar um objeto JSON para a consulta, os paramêtros s
     release_year: null
 }
 ```
+
+`GET -> /api/list/{id}`
+
+Retorna o produto com o ID especificado.
+
 `POST -> /api/create`
  
 Cria um novo filme no banco de dados. É necessário enviar um objeto JSON contendo as seguintes informações:
