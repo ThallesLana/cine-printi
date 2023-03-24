@@ -146,13 +146,21 @@ class MoviesController extends Controller
 
             $Movies = new Movies();
 
-            $response = $Movies->updateMovies($request->id_movie, $request->title, $request->category, $request->age_range, $request->release_year);
-
-            return response()->json([
-                'data' => $response,
-                'message' => 'UPDATED.MOVIES.SUCCESS',
-                'status' => 200
-            ]);
+            $idMovie = $Movies->verifyExistsId($request->id_movie);
+            if($idMovie){
+                $response = $Movies->updateMovies($request->id_movie, $request->title, $request->category, $request->age_range, $request->release_year);
+                return response()->json([
+                    'data' => $response,
+                    'message' => 'DELETED.MOVIES.SUCCESS',
+                    'status' => 200
+                ]);
+            } else {
+                return response()->json([
+                    'data' => 'Item not found',
+                    'message' => 'DELETED.MOVIES.ERROR',
+                    'status' => 404
+                ]);
+            }
         } catch (QueryException $e) {
             return response()->json(['error' => 'Erro de banco de dados'], 500);
         } catch (ValidationException $e) {
